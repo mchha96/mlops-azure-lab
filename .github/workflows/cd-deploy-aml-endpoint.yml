@@ -83,7 +83,7 @@ jobs:
       - name: Deploy managed endpoint + deployment
         run: |
           TARGET="${{ github.event.inputs.target_env }}"
-          ENDPOINT_NAME="iris-endpoint-${TARGET}"
+          ENDPOINT_NAME="iris-endpoint-${TARGET}---"
           DEPLOYMENT_NAME="iris-deployment-${TARGET}"
 
           az configure --defaults group="$AML_RESOURCE_GROUP" workspace="$AML_WORKSPACE"
